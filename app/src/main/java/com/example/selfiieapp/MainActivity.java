@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public Bitmap getImage(int requestCode, int resultCode, Intent data, int RESULT_OK) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            return imageBitmap;
+            return (Bitmap) extras.get("data");
         }
         else return null;
     }
